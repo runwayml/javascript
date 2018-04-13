@@ -5,7 +5,7 @@
 
 # Runway + JavaScript
 
-A collection of stand alone examples of connecting [Runway](https://runwayml.com/) to [JavaScript](https://processing.org/).
+A collection of stand alone examples of connecting [Runway](https://runwayml.com/) to JavaScript.
 Examples are separated by current available models.
 
 ## Examples
