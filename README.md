@@ -20,7 +20,7 @@ Examples are separated by current available models.
 
 ## Library
 
-Ideally this will be a JavaScript Library that manages the socket connections. For now all examples are using [socket.io](https://socket.io/) to get real-time data. Some examples use [p5.js](https://p5js.org/) to draw things on the canvas.
+Ideally this will become a JavaScript Library that manages the socket connections. For now all examples are using [socket.io](https://socket.io/) to get real-time data. Some examples use [p5.js](https://p5js.org/) to draw things on the canvas.
 
 ## Contributing
 
