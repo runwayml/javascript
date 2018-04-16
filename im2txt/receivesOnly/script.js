@@ -20,8 +20,16 @@
 // Runway: im2txt receiving data Demo
 // This example just receives incoming data from Runway.
 // No need to send images or data from here.
+// You should select Camera from the Input Panel
+//
+// Cristóbal Valenzuela
+// cris@runwayml.com
+//
+// ===============================================================
+
 
 // Create a connection to the Runway HTTP Server
+// You should select Camera from the Input Panel
 // *You should update this address to match the URL provided by the app
 var socket = io.connect('http://127.0.0.1:3333');
 
