@@ -1,0 +1,63 @@
+<!--
+ Copyright (C) 2018 Cristobal Valenzuela
+ 
+ This file is part of RunwayML.
+ 
+ RunwayML is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ RunwayML is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with RunwayML.  If not, see <http://www.gnu.org/licenses/>.
+ 
+-->
+
+<!-- 
+  This examples has the bare minimum to establish
+  a socket connection with Runway and the im2txt model
+
+  Cristóbal Valenzuela
+  hello@runwayml.com
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Runway: im2txt Demo</title>
+  <!-- We are using socket.io to establish a socket connection to Runway -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <style>
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Information about the model -->
+  <div>
+    <h2>im2txt Demo: receiving data coming from Runway</h2>
+    <p>About the model: The im2txt is a model, developed by Google, that uses a deep neural network to learn how to describe the content of images. Basically you can give it any image and it will output a short caption or description of the image.</p>
+    <p>More information: <a href="https://runwayml.com/tutorials/im2txt/">https://runwayml.com/tutorials/im2txt/</a></p>
+    <hr />
+  </div>
+
+  <!-- An element to show whatever is coming from Runway -->
+  <h3>Output</h3>
+  <p id="status">Not Connected</p>
+  <p>Result: <span id="log"></span></p>
+
+  <!-- The main script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
