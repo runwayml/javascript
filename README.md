@@ -11,6 +11,8 @@ Examples are separated by current available models.
 ## Examples
 
 - [im2txt](/im2txt)
+  - [Receiving data from Runway](/im2txt/receivesOnly)
+  - [Sending live webcam feed](/im2txt/sendImages)
 - [OpenPose](/openpose)
 
 ## Library
