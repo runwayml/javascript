@@ -64,11 +64,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Create a connection with Runway
   // *You should update this address to match the URL provided by the app
-  socket = io.connect('http://10.0.1.5:33200/query');
+  socket = io.connect('http://127.0.0.1:33200/query');
 
   // When a connection is established
   socket.on('connect', function() {
     status.innerHTML = 'Connected';
+  });
+
+  socket.on('connect_error', (error) => {
+    console.error(error);
+  });
+
+  socket.on('connect_timeout', (timeout) => {
+    console.error(timeout);
   });
 
   // When there is new data coming in, update the log element
@@ -77,6 +85,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (humans.length > 0) {
       humans.forEach(human => drawHuman(human));
     }
+  });
+
+  socket.on('ping', () => {
+    console.log("ping");
+  });
+
+  socket.on('pong', (latency) => {
+      console.log("latency",latency);
   });
 
 });
