@@ -30,7 +30,7 @@
 // Create a connection to the Runway HTTP Server
 // You should select HTTP from the INPUT Panel
 // *You should update this address to match the URL provided by the app
-var socket = io.connect('http://10.0.1.5:33100/query');
+var socket = io.connect('http://127.0.0.1:33100/query');
 
 // Wait until the page is loaded
 document.addEventListener("DOMContentLoaded", function(event) {
