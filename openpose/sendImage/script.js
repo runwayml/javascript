@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Create a connection with Runway
   // *You should update this address to match the URL provided by the app
-  socket = io.connect('http://10.0.1.5:33200/query');
+  socket = io.connect('http://172.16.217.40:33200/query');
 
   // When a connection is established
   socket.on('connect', function() {
