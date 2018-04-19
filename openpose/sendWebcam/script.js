@@ -17,12 +17,12 @@
 // 
 // ===============================================================
 //
-// Runway: OpenPose Single Image Demo
+// Runway: OpenPose Send Webcam Demo
 // This example sends one image to Runway and draw all humans detected in the image
 // p5.js is used to draw the human data sent from Runway
 // You should select HTTP from the Input Panel
 // 
-// Cristóbal Valenzuela
+// Cristóbal Valenzuela, George Profenza (merging sendImage and receviesOnly examples)
 // cris@runwayml.com
 //
 // ===============================================================

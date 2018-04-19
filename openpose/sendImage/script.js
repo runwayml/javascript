@@ -70,13 +70,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   socket.on('connect', function() {
     status.innerHTML = 'Connected';
   });
-
+  // Handle connection error (in case something is wrong and we can't connect to Runway)
   socket.on('connect_error', (error) => {
     console.error(error);
   });
-
+  // Handle connection timeout (in case something is wrong and it's taking ages connecting to Runway)
   socket.on('connect_timeout', (timeout) => {
-    console.error(timeout);
+    console.warn(socket.io.uri,"connect_timeout",timeout);
   });
 
   // When there is new data coming in, update the log element
@@ -87,13 +87,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   });
 
-  socket.on('ping', () => {
-    console.log("ping");
-  });
-
-  socket.on('pong', (latency) => {
-      console.log("latency",latency);
-  });
 
 });
 
