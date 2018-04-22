@@ -31,6 +31,7 @@ var capture;
 var w = 400;
 var h = 225;
 var colors;
+var canvas;
 
 // This are all the body connections we want to draw
 var bodyConnections = [
@@ -71,47 +72,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // When a connection is established
   socket.on('connect', function() {
     status.innerHTML = 'Connected';
-    setInterval(sendImgToRunway,500,capture);
   });
 
-  // When there is a data event, update the humans array
+  // When there is a data event, update the humans array and send new data
   socket.on('update_response', function(data) {
     humans = data.results.humans;
+    sendCanvasToRunway();
   });
 });
+
+// Send the current canvas to Runway
+function sendCanvasToRunway() {
+  socket.emit('update_request', {
+    data: canvas.elt.toDataURL('image/jpeg'),
+    model: "mobilenet_thin"
+  });
+}
 
 // p5 setup function
 function setup() {
   // Create a canvas
-  createCanvas(w, h);
+  canvas = createCanvas(w, h);
+
   // Create a video element. 
   // Although we are getting the images from Runway, this is just to show the video behind
   capture = createCapture(VIDEO);
   capture.size(w, h);
+  capture.hide();
+
   // Set some style and colors
   strokeWeight(2);
   colors = [color('#00ff00'), color('#ffff00'), color('#ff0000'), color('#00ffff'), color('#ffffff'), color('#f4f'), color('#00ff'), color('#ffaf00'), color('#aff'), color('#aaf'), color('#33a'), color('#55f'), color('#771'), color('#15f'), color('#ff0000'), color('#00ff00'), color('#ffff00'), color('#ff0000')];
 
-}
 
-function sendImgToRunway(img){
-  if(img){
-    // update camera pixels
-    img.loadPixels();
-    // send data
-    socket.emit('update_request', {
-      data: img.canvas.toDataURL('image/jpeg'),
-      model: "mobilenet_thin"
-    });
-  }else{
-    console.warn("invalid pixels, skipping request to Runway");
-  }
+  sendCanvasToRunway();
 }
 
 // p5 draw function
 function draw() {
+
   // Every frame, draw the current video frame
   image(capture, 0, 0, w, h);
+
   // If there are humans detected, draw them in top of video frames
   if (humans.length > 0) {
     humans.forEach(human => drawHuman(human));

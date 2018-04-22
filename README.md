@@ -17,6 +17,9 @@ Examples are separated by current available models.
   - [Receiving data from Runway](/openpose/receivesOnly)
   - [Sending live webcam feed](/openpose/sendWebcam)
   - [Sending static images](/openpose/sendImage)
+- [YOLO](/yolo)
+  - [Receiving data from Runway](/yolo/receivesOnly)
+  - [Sending live webcam feed](/yolo/sendWebcam)
 
 ## Library
 

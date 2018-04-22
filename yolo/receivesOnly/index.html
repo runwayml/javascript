@@ -19,10 +19,10 @@
 -->
 
 <!-- 
-  OpenPose Demo: This example creates a video stream and send images to Runway
+  YOLO Demo: This example receives objects detected by Runway using YOLO
 
-  Cristóbal Valenzuela, George Profenza (merging sendImage and receivesOnly examples)
-  hello@runwayml.com
+  Cristóbal Valenzuela
+  cris@runwayml.com
 -->
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Runway: OpenPose Demo</title>
+  <title>Runway: YOLO Demo</title>
   <!-- We are using socket.io to establish a socket connection to Runway -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
   <!-- We are using p5.js to draw in the canvas -->
@@ -51,9 +51,9 @@
 <body>
   <!-- Information about the model -->
   <div>
-    <h2>OpenPose Demo: sending webcam pixels and receiving data coming from Runway</h2>
-    <p>About the model: Real-time multi-person keypoint detection library for body, face, and hands estimation.</p>
-    <p>More information: <a href="https://runwayml.com/tutorials/openpose/">https://runwayml.com/tutorials/openpose/</a></p>
+    <h2>YOLO Demo: receiving data coming from Runway</h2>
+    <p>About the model: You only look once (YOLO) is a state-of-the-art, real-time object detection system.</p>
+    <p>More information: <a href="https://runwayml.com/tutorials/yolo/">https://runwayml.com/tutorials/yolo/</a></p>
     <p>This example uses <a href="https://p5js.org/">p5.js</a> to draw body connections</p>
     <hr />
   </div>

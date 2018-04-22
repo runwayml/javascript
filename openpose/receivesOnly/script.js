@@ -34,7 +34,7 @@ var colors;
 
 // This are all the body connections we want to draw
 var bodyConnections = [
-  ['Nose', 'Left_Eye'],
+  ['Nose', 'Right_Shoulder'],
   ['Left_Eye', 'Left_Ear'],
   ['Nose', 'Right_Eye'],
   ['Right_Eye', 'Right_Ear'],
