@@ -20,6 +20,8 @@ Examples are separated by current available models.
 - [YOLO](/yolo)
   - [Receiving data from Runway](/yolo/receivesOnly)
   - [Sending live webcam feed](/yolo/sendWebcam)
+- [Gaze Detection](/gaze)
+  - [Receiving data from Runway](/gaze/receivesOnly)
 
 ## Library
 
