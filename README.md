@@ -1,12 +1,10 @@
 <p align="center">
-  <img src="resources/runway_icon.png" width="95">
-  <img src="resources/js_icon.png" width="90">
+  <img src="https://runway.nyc3.digitaloceanspaces.com/assets/github/cover_runway_javascript_github.jpg">
 </p>
 
 # Runway + JavaScript
 
-A collection of stand alone examples connecting [Runway](https://runwayml.com/) to JavaScript.
-Examples are separated by current available models.
+A collection of examples and tutorials on how to use [Runway](https://runwayml.com/) with JavaScript applications.
 
 ## Examples
 
@@ -25,7 +23,7 @@ Examples are separated by current available models.
 
 ## Library
 
-Ideally this will become a JavaScript Library that manages the socket connections. For now all examples are using [socket.io](https://socket.io/) to get real-time data. Some examples use [p5.js](https://p5js.org/) to draw things on the canvas.
+This will soon become a JavaScript library that manages the connections and data streams with a simple API. 
 
 ## Contributing
 

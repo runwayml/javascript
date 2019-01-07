@@ -30,7 +30,7 @@
 // Create a connection to the Runway HTTP Server
 // You should select HTTP from the INPUT Panel
 // *You should update this address to match the URL provided by the app
-var socket = io.connect('http://127.0.0.1:33100/query');
+var socket = io.connect('http://127.0.0.1:3000/');
 
 // Wait until the page is loaded
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true })
       .then((stream) => {
-        video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
         video.play();
       });
   }
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   // When there is new data coming in, update the log element
-  socket.on('update_response', function(data) {
-    log.innerHTML = data.results[0].caption;
+  socket.on('data', function(data) {
+    log.innerHTML = data;
     if (shouldLoop) {
       sendImage();
     }
@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function sendImage() {
     ctx.drawImage(video, 0, 0, 300, 280);
     // Send to Runway the current element in the canvas
-    socket.emit('update_request', {
-      data: canvas.toDataURL('image/jpeg')
+    socket.emit('query', {
+      image: canvas.toDataURL('image/jpeg')
     });
   }
 
