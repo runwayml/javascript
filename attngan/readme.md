@@ -16,4 +16,4 @@ $ python -m SimpleHTTPServer 8080
 
 ```
 
-[screenshot]()
+![screenshot](https://github.com/koji/javascript/blob/master/attngan/screenshot.png)
