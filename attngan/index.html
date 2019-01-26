@@ -15,69 +15,6 @@
     <br>
     <h2>output</h2>
     <div id="output"></div>
-    <script>
-        window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
-        const recognition = new webkitSpeechRecognition();
-        recognition.lang = 'en';
-
-        recognition.addEventListener('result', function(event){
-            const text = event.results.item(0).item(0).transcript;
-            document.getElementById('input').innerHTML = text;
-            // send data
-            postData();
-        }, false);
-
-
-        const Base64ToImage = (base64img, callback) => {
-            const img = new Image();
-            img.onload = () => {
-                callback(img);
-            };
-            img.src = base64img;
-        }
-
-        
-
-        
-        const postData = async () => {
-            console.time("timer");
-            const url = "http://localhost:8000/query";
-            const text = document.getElementById('input').value
-            // const text = "test test";
-            const input = {"caption": text};
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(input),
-            };
-            const data = await fetch(url, settings)
-                .then(response => response.json())
-                .then(json => {
-                    return json;
-                })
-                .catch(e => {
-                    return e
-                });
-            
-            console.log(`base64 \n ${data.result}`);
-            console.timeEnd("timer");
-            Base64ToImage(data.result, (img) => {
-                document.getElementById('output').innerHTML ='';
-                document.getElementById('output').appendChild(img);
-            });
-        }
-
-        const record = ()=>{
-            recognition.start();
-            // postData()
-        }
-        const clearTextArea = () => {
-            document.getElementById('input').value = "";
-        }
-    </script>
     <script src="./script.js"></script>
 </body>
 </html>
