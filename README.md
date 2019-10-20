@@ -20,6 +20,8 @@ A collection of examples and tutorials on how to use [Runway](https://runwayml.c
   - [Sending live webcam feed](/yolo/sendWebcam)
 - [Gaze Detection](/gaze)
   - [Receiving data from Runway](/gaze/receivesOnly)
+- [SPADE-COCO](/SPADE-COCO)
+  - [Noise2D Image Synthesizer](/SPADE-COCO/Noise2DSynth)
 
 ## Library
 

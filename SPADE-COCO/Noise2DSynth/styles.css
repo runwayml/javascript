@@ -1,0 +1,86 @@
+/* common styles */
+
+/* Border box declaration */
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(28, 28, 28);
+
+    overflow: hidden;
+    font-family: Arial, Geneva, sans-serif;
+}
+
+.ui_wrapper {
+    width: 32rem;
+    padding: 2rem 2rem;
+
+    display: flex;
+    padding: 1rem;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    flex: 0 0 4rem; 
+}
+
+button {
+    height: 2rem;
+    flex: 0 0 8rem;
+
+    font-size: .75rem;
+    font-weight: 500;
+
+    border: solid 1px rgb(144, 226, 167);
+
+    border-radius: 5px;
+    outline: none;
+
+    color: rgb(144, 226, 167);
+    background-color: rgb(19, 19, 21);
+
+}
+
+button:active {
+    border: solid 1px rgb(116, 173, 134);
+    color: rgb(116, 173, 134);
+}
+
+label {
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 2rem;
+
+    color: rgb(144, 226, 167);
+}
+
+input {
+    height: 1.75rem;
+    padding: .25rem;
+
+    font-weight: 500;
+
+    outline: none;
+
+    border-color: black;
+    background-color: rgb(144, 226, 167);
+}
+
+
+/* end of common styles */

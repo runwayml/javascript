@@ -1,0 +1,184 @@
+Label,ID,Color
+unlabeled,182,#000000
+person,0,#d60000
+bicycle,1,#8c3bff
+car,2,#018700
+motorcycle,3,#00acc6
+airplane,4,#97ff00
+bus,5,#ff7ed1
+train,6,#6b004f
+truck,7,#ffa52f
+boat,8,#00009c
+traffic light,9,#857067
+fire hydrant,10,#004942
+street sign,11,#4f2a00
+stop sign,12,#00fdcf
+parking meter,13,#bcb6ff
+bench,14,#95b379
+bird,15,#bf03b8
+cat,16,#2466a1
+dog,17,#280041
+horse,18,#dbb3af
+sheep,19,#fdf490
+cow,20,#4f445b
+elephant,21,#a37c00
+bear,22,#ff7066
+zebra,23,#3f806e
+giraffe,24,#82000c
+hat,25,#a37bb3
+backpack,26,#344d00
+umbrella,27,#9ae4ff
+shoe,28,#eb0077
+eye glasses,29,#2d000a
+handbag,30,#5d90ff
+tie,31,#00c61f
+suitcase,32,#5701aa
+frisbee,33,#001d00
+skis,34,#9a4600
+snowboard,35,#959ea5
+sports ball,36,#9a425b
+kite,37,#001f31
+baseball bat,38,#c8c300
+baseball glove,39,#ffcfff
+skateboard,40,#00bd9a
+surfboard,41,#3615ff
+tennis racket,42,#2d2424
+bottle,43,#df57ff
+plate,44,#bde6bf
+wine glass,45,#7e4497
+cup,46,#524f3b
+fork,47,#d86600
+knife,48,#647438
+spoon,49,#c17287
+bowl,50,#6e7489
+banana,51,#809c03
+apple,52,#bd8a64
+sandwich,53,#623338
+orange,54,#cacdda
+broccoli,55,#6beb82
+carrot,56,#213f69
+hot dog,57,#a17eff
+pizza,58,#fd03ca
+donut,59,#75bcfd
+cake,60,#d8c382
+chair,61,#cda3cd
+couch,62,#6d4f00
+potted plant,63,#006974
+bed,64,#469e5d
+mirror,65,#93c6bf
+dining table,66,#f9ff00
+window,67,#bf5444
+desk,68,#00643b
+toilet,69,#5b4fa8
+door,70,#521f64
+tv,71,#4f5eff
+laptop,72,#7e8e77
+mouse,73,#b808f9
+remote,74,#8a91c3
+keyboard,75,#b30034
+cell phone,76,#87607e
+microwave,77,#9e0075
+oven,78,#ffddc3
+toaster,79,#500800
+sink,80,#1a0800
+refrigerator,81,#4b89b5
+blender,82,#00dfdf
+book,83,#c8fff9
+clock,84,#2f3415
+vase,85,#ff2646
+scissors,86,#ff97aa
+teddy bear,87,#03001a
+hair drier,88,#c860b1
+toothbrush,89,#c3a136
+hair brush,90,#7c4f3a
+banner,91,#f99e77
+blanket,92,#566464
+branch,93,#d193ff
+bridge,94,#2d1f69
+building-other,95,#411a34
+bush,96,#af9397
+cabinet,97,#629e99
+cage,98,#bcdd7b
+cardboard,99,#ff5d93
+carpet,100,#0f2823
+ceiling-other,101,#b8bdac
+ceiling-tile,102,#743b64
+cloth,103,#0f000c
+clothes,104,#7e6ebc
+clouds,105,#aaaaaa
+counter,106,#ff4600
+cupboard,107,#7e0087
+curtain,108,#ffcd3d
+desk-stuff,109,#2f3b42
+dirt,110,#fda5ff
+door-stuff,111,#89013d
+fence,112,#752b01
+floor-marble,113,#0a8995
+floor-other,114,#050052
+floor-stone,115,#8ed631
+floor-tile,116,#52c372
+floor-wood,117,#465970
+flower,118,#570121
+fog,119,#a52101
+food-other,120,#90934b
+fruit,121,#00421d
+furniture-other,122,#8000d1
+grass,123,#1dc331
+gravel,124,#bf3883
+ground-other,125,#f4ffd4
+hill,126,#00d3ff
+house,127,#6900f7
+leaves,128,#9cbad1
+light,129,#79d8aa
+mat,130,#69565d
+metal,131,#006905
+mirror-stuff,132,#36369c
+moss,133,#018246
+mountain,134,#3c3732
+mud,135,#07a5ef
+napkin,136,#ff802f
+net,137,#a754b8
+paper,138,#675982
+pavement,139,#72ffff
+pillow,140,#d88701
+plant-other,141,#bad3ff
+plastic,142,#8e362f
+platform,143,#a7a080
+playingfield,144,#007ce2
+railing,145,#8e7e8e
+railroad,146,#994487
+river,147,#003996
+road,148,#aeaac8
+rock,149,#a06062
+roof,150,#4b3a77
+rug,151,#6b8282
+salad,152,#f0dde6
+sand,153,#ffbad3
+sea,154,#363ea7
+shelf,155,#b3ffa8
+sky-other,156,#0c1107
+skyscraper,157,#d6526e
+snow,158,#959efd
+solid-other,159,#7c7e00
+stairs,160,#759eb8
+stone,161,#db877e
+straw,162,#111318
+structural-other,163,#d482d4
+table,164,#9e00bf
+tent,165,#dbefff
+textile-other,166,#8eaa9a
+towel,167,#706442
+tree,168,#8c682f
+vegetable,169,#084d5e
+wall-brick,170,#9cb844
+wall-concrete,171,#d8ddd4
+wall-other,172,#caff6b
+wall-panel,173,#b364eb
+wall-stone,174,#465d33
+wall-tile,175,#009e7c
+wall-wood,176,#c14100
+water-other,177,#4fbcba
+waterdrops,178,#d88ab1
+window-blind,179,#5b72b5
+window-other,180,#4b4101
+wood,181,#95825d
