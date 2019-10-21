@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>SPADE-COCO Example</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="js/papaparse.min.js"></script>
+	</head>
+	<body>
+            
+        <div class="ui_wrapper">
+            <button id="btn_shader">New Shader</button>
+            <div>
+                <label for="port">Port:</label>
+                <input type="number" id="port" name="port" value="8000">
+            </div>
+            <button id="btn_send">Send to Runway</button>
+        </div>
+        <script src="js/three.js"></script>
+        <script id="frag1" type="x-shader/x-fragment">
+            uniform float iGlobalTime;
+            uniform vec2 iResolution;
+
+            uniform vec3 uColors[4];
+            uniform vec2 uSeed;
+
+            varying vec2 fragCoord;
+            varying vec2 vUv;
+            
+            // 2D Random
+            // from https://thebookofshaders.com/11/
+            float random (in vec2 st) {
+                return fract(sin(dot(st.xy, uSeed)) * 43758.5453123);
+            }
+
+            // 2D Noise based on Morgan McGuire @morgan3d
+            // https://www.shadertoy.com/view/4dS3Wd
+            float noise (in vec2 st) {
+                vec2 i = floor(st);
+                vec2 f = fract(st);
+            
+                // Four corners in 2D of a tile
+                float a = random(i);
+                float b = random(i + vec2(1.0, 0.0));
+                float c = random(i + vec2(0.0, 1.0));
+                float d = random(i + vec2(1.0, 1.0));
+            
+                // Smooth Interpolation
+            
+                // Cubic Hermine Curve.  Same as SmoothStep()
+                vec2 u = f*f*(3.0-2.0*f);
+                // u = smoothstep(0.,1.,f);
+            
+                // Mix 4 coorners percentages
+                return mix(a, b, u.x) +
+                        (c - a)* u.y * (1.0 - u.x) +
+                        (d - b) * u.x * u.y;
+            }
+
+            void main()
+            {
+                vec2 st = vUv;
+                vec3 color;
+                float noiseMap = noise(5.*st);
+
+                float col1 = smoothstep(0.15, 0.35, noiseMap);
+                color = mix(uColors[0], uColors[1], col1);
+                float col2 = smoothstep(0.45, 0.55, noiseMap);
+                color = mix(color, uColors[2], col2);
+                float col3 = smoothstep(0.65, 0.85, noiseMap);
+                color = mix(color, uColors[3], col3);
+
+                gl_FragColor.rgb = color;
+            }
+        </script>
+        <script id="general" type="x-shader/x-vertex">
+            attribute vec3 in_Position;
+            varying vec2 fragCoord;
+            varying vec2 vUv; 
+            void main()
+            {
+                vUv = uv;
+                vec4 mvPosition = modelViewMatrix * vec4(position, 1.0 );
+                gl_Position = projectionMatrix * mvPosition;
+                fragCoord = position.xy;
+            }
+        </script>
+        <script src="js/index.js"></script>
+	</body>
+</html>
