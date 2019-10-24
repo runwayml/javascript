@@ -11,9 +11,13 @@ More RunwayML networking examples [here](https://learn.runwayml.com/#/networking
 🎉Community Contribution
 
 ## Examples
-- [Generate Text from Webcam Images with im2txt](/im2txt/sendWebcam)
-- [Receive Text from im2txt](/im2txt/receivesOnly)
-- [Noise2D Image Synthesizer using SPADE-COCO](/SPADE-COCO/Noise2DSynth) by [JP Yepez](https://www.jpyepez.com) 🎉 
+
+### HTTP
+* [Noise2D Image Synthesizer using SPADE-COCO](/SPADE-COCO/Noise2DSynth) by [JP Yepez](https://www.jpyepez.com) 🎉 
+
+### Socket.IO
+* [Generate Text from Webcam Images with im2txt](/im2txt/sendWebcam)
+* [Receive Text from im2txt](/im2txt/receivesOnly)
 
 ## Library
 
