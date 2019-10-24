@@ -17,7 +17,7 @@ More RunwayML networking examples [here](https://learn.runwayml.com/#/networking
 
 ## Library
 
-This will soon become a JavaScript library that manages the connections and data streams with a simple API. 
+Ideally this will become a JavaScript library that manages the connections and data streams with a simple API. 
 
 ## Contributing
 
