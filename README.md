@@ -2,9 +2,9 @@
   <img src="./assets/cover_runway_javascript_github.jpg">
 </p>
 
-# Runway + JavaScript
+# RunwayML + JavaScript
 
-A collection of examples and tutorials on how to use [Runway](https://runwayml.com/) with JavaScript applications.
+A collection of examples and tutorials on how to use [RunwayML](https://runwayml.com/) with JavaScript applications.
 
 More RunwayML networking examples [here](https://learn.runwayml.com/#/networking/examples).
 
